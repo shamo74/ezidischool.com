@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>لا يوجد اتصال بالإنترنت</title>
+  <style>
+    @font-face {
+      font-family: 'arabic';
+      src: url('arabic.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    * {
+      font-family: 'arabic', 'Tajawal', sans-serif;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body, html {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #008983; /* اللون المطلوب */
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.1); /* تأثير زجاجي */
+      border-radius: 15px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px); /* تأثير البلور */
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      max-width: 400px;
+      width: 90%;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      color: #ffffff;
+      font-size: 32px;
+      margin-bottom: 15px;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    p {
+      color: #e0e0e0;
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .retry-button {
+      padding: 12px 25px;
+      background-color: #ffffff;
+      color: #008983;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.2s;
+    }
+
+    .retry-button:hover {
+      background-color: #e0e0e0;
+      transform: scale(1.05);
+    }
+
+    .retry-button:active {
+      transform: scale(0.95);
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 24px; }
+      p { font-size: 16px; }
+      .container { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>لا يوجد اتصال بالإنترنت</h1>
+    <p>لا يمكن متابعة الدراسة بدون اتصال بالإنترنت، لأن الدروس متاحة عبر الإنترنت فقط. يرجى تشغيل بيانات الهاتف أو الاتصال بشبكة واي فاي للمتابعة. شكرًا لك!</p>
+    <button class="retry-button" onclick="window.location.reload()">إعادة المحاولة</button>
+  </div>
+</body>
+</html>
